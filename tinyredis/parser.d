@@ -1,3 +1,10 @@
+//############################################
+// Copyright (C) Lyrebird Software 1996-2013
+// File: parser.d
+// Created: 2013-08-06 12:24:31
+// Modified: 2013-08-06 12:24:46
+//############################################
+
 module tinyredis.parser;
 
 private:
@@ -148,7 +155,6 @@ public :
                         return cast(T)intval;
                     else
                         throw new ConvOverflowException("Cannot convert " ~ to!string(intval) ~ " to " ~ to!(string)(typeid(T)));
-                    break;
                     
                 case ResponseType.Bulk : 
                     try{
@@ -158,7 +164,6 @@ public :
                         e.msg = "Cannot convert " ~ value ~ " to " ~ to!(string)(typeid(T));
                         throw e;
                     }
-                    break;
                 
                 default:
                     throw new RedisCastException("Cannot cast " ~ type ~ " to " ~ to!(string)(typeid(T)));
@@ -260,7 +265,6 @@ public :
                 
             case '-' :
                 throw new RedisResponseException(cast(string)bytes);
-                break;
                 
             case ':' :
                 response.type = ResponseType.Integer;
