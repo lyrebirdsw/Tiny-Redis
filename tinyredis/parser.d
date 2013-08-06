@@ -1,10 +1,3 @@
-//############################################
-// Copyright (C) Lyrebird Software 1996-2013
-// File: parser.d
-// Created: 2013-08-06 12:24:31
-// Modified: 2013-08-06 12:24:46
-//############################################
-
 module tinyredis.parser;
 
 private:

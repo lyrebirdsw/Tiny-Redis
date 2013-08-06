@@ -1,9 +1,3 @@
-//############################################
-// Copyright (C) Lyrebird Software 1996-2013
-// File: console.d
-// Created: 2013-08-06 11:58:27
-// Modified: 2013-08-06 12:16:54
-//############################################
 
 import tinyredis.redis,
        std.stdio;
